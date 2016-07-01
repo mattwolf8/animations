@@ -1,0 +1,52 @@
+body {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+.wrapper {
+  min-width: 420px;
+  margin: 0 auto;
+  display: inline-block;
+  background: red;
+}
+
+#ticker {
+  width: 250px;
+  text-align: center;
+  height: 29px;
+  background: #3f3f3f;
+  color: #ffffff;
+  list-style-type: none;
+  margin: 0 auto;
+}
+
+#ticker li {
+  position: absolute;
+  opacity: 0;
+  left: 0;
+  right: 0;
+}
+
+#ticker li.active_class {
+  opacity: 0;
+  animation: shop_animate 6s infinite;
+}
+
+#ticker:hover  li.active_class{
+  animation-play-state: paused;
+}
+
+@keyframes shop_animate {
+  0% {
+      opacity: 0;
+  }
+  35% {
+      opacity: 1;
+  }
+  75% {
+      opacity: 1;
+  }
+  100% {
+      opacity: 0;
+  }
+}
