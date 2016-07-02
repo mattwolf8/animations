@@ -3,21 +3,30 @@ body {
   margin: 0;
   text-align: center;
 }
+
+h1{
+  color: #eeeeee;
+  text-shadow: 2px 1px #558ABB;
+  letter-spacing: .05em;
+}
+
 .wrapper {
   min-width: 420px;
   margin: 0 auto;
   display: inline-block;
-  background: red;
+  background: #663399;
 }
 
 #ticker {
   width: 250px;
   text-align: center;
   height: 29px;
+  position: relative;
   background: #3f3f3f;
-  color: #ffffff;
   list-style-type: none;
   margin: 0 auto;
+  margin-bottom: 5px;
+  pointer-events: none;
 }
 
 #ticker li {
@@ -25,16 +34,33 @@ body {
   opacity: 0;
   left: 0;
   right: 0;
+  top: 4px;
+  font-size: 16px;
+  line-height: 1.25;
+}
+
+#ticker li a {
+  color: #ffffff;
+  text-decoration: none;
 }
 
 #ticker li.active_class {
   opacity: 0;
   animation: shop_animate 6s infinite;
+  pointer-events: auto;
 }
 
 #ticker:hover  li.active_class{
   animation-play-state: paused;
+
+  font-size: 20px;
+  letter-spacing: 1px;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: underline;
+  top: 0;
 }
+
 
 @keyframes shop_animate {
   0% {

@@ -57,4 +57,4 @@
 
   // Event Listener (mouseover)
   ul.addEventListener('mouseout', onMouseOut);
-}())
+}());
